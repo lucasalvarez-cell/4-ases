@@ -1,0 +1,9 @@
+// Safe: content is always static JSON-LD schema data, never user input
+export default function JsonLd({ data }: { data: object }) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}

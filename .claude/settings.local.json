@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx skills *)",
+      "Read(//c/Users/Lucas/.claude/plugins/cache/playwright-skill/playwright-skill/4.1.0/skills/playwright-skill/**)",
+      "Bash(node -e \"require\\('./lib/helpers'\\).detectDevServers\\(\\).then\\(s => console.log\\(JSON.stringify\\(s\\)\\)\\)\")",
+      "Bash(npm run *)",
+      "Bash(node run.js \"C:\\\\Users\\\\Lucas\\\\AppData\\\\Local\\\\Temp\\\\playwright-test-audit.js\")"
+    ]
+  }
+}

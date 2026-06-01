@@ -1,0 +1,56 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+// PLACEHOLDER: replace XX values with real data before launch
+const metrics = [
+  {
+    value: "XX+",      // PLACEHOLDER — real client count
+    label: "Empresas clientes",
+    desc: "De todos los sectores",
+  },
+  {
+    value: "XX%",      // PLACEHOLDER — real average savings figure
+    label: "Ahorro medio",
+    desc: "En el primer año de colaboración",
+  },
+  {
+    value: "+10",
+    label: "Años de experiencia",
+    desc: "En optimización de costes empresariales",
+  },
+  {
+    value: "+200",
+    label: "Proveedores verificados",
+    desc: "Red propia de negociación",
+  },
+];
+
+export default function Stats() {
+  return (
+    <section className="py-20 bg-cream border-t border-border">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-y-2 lg:divide-y-0 lg:divide-x divide-border">
+          {metrics.map((m, i) => (
+            <motion.div
+              key={m.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              className="py-10 px-8 first:pl-0 last:pr-0"
+            >
+              <p className="font-display text-5xl md:text-6xl font-bold text-ink leading-none mb-3">
+                {m.value}
+              </p>
+              <p className="font-sans font-semibold text-ink text-sm mb-1">
+                {m.label}
+              </p>
+              <p className="text-muted text-xs leading-relaxed">{m.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

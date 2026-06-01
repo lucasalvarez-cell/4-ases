@@ -1,0 +1,91 @@
+<h2>Opción B — Diseño Detallado</h2>
+<p class="subtitle">¿Se ve bien así? Aprueba para continuar con la implementación.</p>
+
+<div class="mockup">
+  <div class="mockup-header">WhyUs — Vista de escritorio</div>
+  <div class="mockup-body" style="background:#F5F4F0;padding:40px;font-family:'Georgia',serif">
+
+    <!-- Section header -->
+    <div style="margin-bottom:28px">
+      <p style="font-size:10px;letter-spacing:4px;color:#888;text-transform:uppercase;font-family:sans-serif;margin-bottom:10px">/ Por Qué Elegirnos</p>
+      <h2 style="font-size:36px;font-weight:700;color:#0a0f1e;line-height:1.15;font-family:'Georgia',serif">
+        ¿Por Qué Empresas<br>
+        <span style="color:#3B82F6">Confían en 4 Ases?</span>
+      </h2>
+    </div>
+
+    <!-- Main grid: big photo left + icon cards right -->
+    <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:10px;height:420px">
+
+      <!-- LEFT: Hero photo -->
+      <div style="background:linear-gradient(to top,rgba(10,15,30,0.92) 0%,rgba(10,15,30,0.35) 45%,rgba(10,15,30,0.1) 100%),url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80');background-size:cover;background-position:center top;border-radius:6px;display:flex;flex-direction:column;justify-content:flex-end;padding:32px">
+        <p style="color:rgba(255,255,255,0.4);font-size:9px;letter-spacing:4px;text-transform:uppercase;font-family:sans-serif;margin-bottom:10px">/ Nuestro Compromiso</p>
+        <h3 style="color:#fff;font-size:26px;font-weight:700;line-height:1.25;margin-bottom:10px;font-family:'Georgia',serif">
+          Partners estratégicos,<br>no solo proveedores
+        </h3>
+        <p style="color:rgba(255,255,255,0.55);font-size:13px;line-height:1.6;font-family:sans-serif;max-width:340px">
+          Trabajamos como una extensión de tu equipo, con alineación total de intereses y total transparencia.
+        </p>
+      </div>
+
+      <!-- RIGHT: 4 stacked icon cards -->
+      <div style="display:flex;flex-direction:column;gap:10px">
+
+        <!-- Card 1 -->
+        <div style="background:#fff;border-radius:6px;padding:16px 18px;flex:1;display:flex;align-items:center;gap:14px">
+          <div style="width:38px;height:38px;background:#EBF2FF;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px">🛡️</div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#0a0f1e;margin-bottom:4px;font-family:sans-serif">Sin Letra Pequeña</div>
+            <div style="font-size:11px;color:#888;line-height:1.5;font-family:sans-serif">Sin permanencias ni comisiones ocultas. Transparencia total.</div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div style="background:#fff;border-radius:6px;padding:16px 18px;flex:1;display:flex;align-items:center;gap:14px">
+          <div style="width:38px;height:38px;background:#EBF2FF;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px">🌐</div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#0a0f1e;margin-bottom:4px;font-family:sans-serif">Experiencia Multisectorial</div>
+            <div style="font-size:11px;color:#888;line-height:1.5;font-family:sans-serif">Hostelería, industria, retail, sanidad. Conocemos cada sector.</div>
+          </div>
+        </div>
+
+        <!-- Card 3: dark navy -->
+        <div style="background:#1B2B4B;border-radius:6px;padding:16px 18px;flex:1;display:flex;align-items:center;gap:14px">
+          <div style="width:38px;height:38px;background:rgba(59,130,246,0.18);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px">🤝</div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#fff;margin-bottom:4px;font-family:sans-serif">Red de Proveedores Verificados</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.5);line-height:1.5;font-family:sans-serif">Condiciones que una empresa individual no puede negociar.</div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div style="background:#fff;border-radius:6px;padding:16px 18px;flex:1;display:flex;align-items:center;gap:14px">
+          <div style="width:38px;height:38px;background:#EBF2FF;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:17px">⚡</div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#0a0f1e;margin-bottom:4px;font-family:sans-serif">Equipo Accesible y Proactivo</div>
+            <div style="font-size:11px;color:#888;line-height:1.5;font-family:sans-serif">Anticipamos necesidades y te proponemos mejoras constantemente.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="options" style="margin-top:24px">
+  <div class="option" data-choice="approve" onclick="toggleSelect(this)">
+    <div class="letter">✓</div>
+    <div class="content">
+      <h3>Aprobado — implementar esto</h3>
+      <p>Grid asimétrico (3fr + 2fr), foto hero a la izquierda, 4 icon-cards a la derecha</p>
+    </div>
+  </div>
+  <div class="option" data-choice="adjust" onclick="toggleSelect(this)">
+    <div class="letter">↺</div>
+    <div class="content">
+      <h3>Ajustar algo primero</h3>
+      <p>Cuéntame qué cambiarías y lo ajusto</p>
+    </div>
+  </div>
+</div>
