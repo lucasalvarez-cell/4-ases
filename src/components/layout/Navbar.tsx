@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const links = [
@@ -11,15 +12,22 @@ const links = [
   { href: "/servicios", label: "Servicios" },
 ];
 
+// Pages with a full-bleed dark hero — navbar starts transparent
+const HERO_PAGES = ["/", "/nosotros", "/servicios", "/contacto"];
+
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const hasHero = HERO_PAGES.includes(pathname);
+  const [scrolled, setScrolled] = useState(!hasHero);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    // Reset when navigating to a new page
+    setScrolled(!hasHero || window.scrollY > 50);
+    const handleScroll = () => setScrolled(!hasHero || window.scrollY > 50);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [hasHero]);
 
   return (
     <header
