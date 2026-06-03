@@ -12,9 +12,9 @@ export default function PoliticaPrivacidadPage() {
     <LegalLayout title="Política de Privacidad" updated="Junio 2026">
       <h2>1. Responsable del tratamiento</h2>
       <ul>
-        <li><strong>Identidad:</strong> [NOMBRE_EMPRESA_O_AUTÓNOMO] <em className="placeholder">(pendiente de completar)</em></li>
-        <li><strong>NIF / CIF:</strong> [NIF_CIF] <em className="placeholder">(pendiente de completar)</em></li>
-        <li><strong>Domicilio:</strong> [DIRECCIÓN_COMPLETA] <em className="placeholder">(pendiente de completar)</em></li>
+        <li><strong>Identidad:</strong> 4 ASES SALES S.L.</li>
+        <li><strong>NIF / CIF:</strong> B16446908</li>
+        <li><strong>Domicilio:</strong> Calle Perez Alvarez 90-92, Bajos 3º, 08980, Sant Feliu de Llobregat, Barcelona</li>
         <li><strong>Correo electrónico:</strong> <a href="mailto:Proyectos@4asess.com">Proyectos@4asess.com</a></li>
       </ul>
 

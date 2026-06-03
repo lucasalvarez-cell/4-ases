@@ -15,12 +15,12 @@ export default function AvisoLegalPage() {
         En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se ponen a disposición del usuario los siguientes datos:
       </p>
       <ul>
-        <li><strong>Denominación social:</strong> [NOMBRE_EMPRESA_O_AUTÓNOMO] <em className="placeholder">(pendiente de completar)</em></li>
-        <li><strong>NIF / CIF:</strong> [NIF_CIF] <em className="placeholder">(pendiente de completar)</em></li>
-        <li><strong>Domicilio:</strong> [DIRECCIÓN_COMPLETA] <em className="placeholder">(pendiente de completar)</em></li>
+        <li><strong>Denominación social:</strong> 4 ASES SALES S.L.</li>
+        <li><strong>NIF / CIF:</strong> B16446908</li>
+        <li><strong>Domicilio:</strong> Calle Perez Alvarez 90-92, Bajos 3º, 08980, Sant Feliu de Llobregat, Barcelona</li>
         <li><strong>Correo electrónico:</strong> <a href="mailto:Proyectos@4asess.com">Proyectos@4asess.com</a></li>
         <li><strong>Sitio web:</strong> <a href="https://www.4asessales.com">www.4asessales.com</a></li>
-        <li><strong>Datos registrales:</strong> [REGISTRO_MERCANTIL_TOMO_FOLIO] <em className="placeholder">(pendiente de completar — solo si es sociedad)</em></li>
+        <li><strong>Datos registrales:</strong> Inscrita en el Registro Mercantil de Barcelona <em className="placeholder">(tomo y folio pendientes de completar)</em></li>
       </ul>
 
       <h2>2. Objeto y ámbito de aplicación</h2>
