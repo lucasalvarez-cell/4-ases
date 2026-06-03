@@ -1,22 +1,41 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, ArrowRight } from "lucide-react";
-import { FormEvent } from "react";
+import { Mail, Phone, ArrowRight, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { FormEvent, useState } from "react";
 
 const inputClass =
   "w-full px-0 py-3 bg-transparent border-0 border-b border-border focus:border-ink focus:ring-0 outline-none transition-colors text-ink text-sm font-sans placeholder-muted/60";
 
+type Status = "idle" | "loading" | "success" | "error";
+
 export default function ContactForm() {
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  const [status, setStatus] = useState<Status>("idle");
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setStatus("loading");
+
     const data = new FormData(e.currentTarget);
-    const nombre = data.get("nombre") ?? "";
-    const empresa = data.get("empresa") ?? "";
-    const telefono = data.get("telefono") ?? "";
-    const mensaje = data.get("mensaje") ?? "";
-    const body = `Nombre: ${nombre}%0AEmpresa: ${empresa}%0ATeléfono: ${telefono}%0A%0A${mensaje}`;
-    window.location.href = `mailto:proyectos@4asess.com?subject=Solicitud de reunión - ${empresa}&body=${body}`;
+    const payload = {
+      nombre: data.get("nombre") as string,
+      empresa: data.get("empresa") as string,
+      email: data.get("email") as string,
+      telefono: data.get("telefono") as string,
+      mensaje: data.get("mensaje") as string,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -64,7 +83,7 @@ export default function ContactForm() {
                 href="tel:+34666666666"
                 className="flex items-center gap-4 group"
               >
-                <div className="w-10 h-10 border border-border flex items-center justify-center group-hover:border-cobalt group-hover:bg-cobalt transition-all">
+                <div className="w-10 h-10 border border-border flex items-center justify-center group-hover:border-cobalt transition-all">
                   <Phone size={15} className="text-muted group-hover:text-white transition-colors" />
                 </div>
                 <div>
@@ -94,83 +113,108 @@ export default function ContactForm() {
             viewport={{ once: true }}
             className="lg:col-span-8"
           >
-            <form onSubmit={handleSubmit} className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <label className="block text-[10px] tracking-[0.2em] uppercase text-muted font-sans mb-3">
-                    Nombre *
-                  </label>
-                  <input
-                    name="nombre"
-                    required
-                    type="text"
-                    placeholder="Tu nombre"
-                    className={inputClass}
-                  />
-                </div>
-                <div>
-                  <label className="block text-[10px] tracking-[0.2em] uppercase text-muted font-sans mb-3">
-                    Empresa *
-                  </label>
-                  <input
-                    name="empresa"
-                    required
-                    type="text"
-                    placeholder="Nombre de tu empresa"
-                    className={inputClass}
-                  />
-                </div>
+            {status === "success" ? (
+              <div className="flex flex-col items-start gap-4 py-12">
+                <CheckCircle2 size={40} className="text-cobalt" />
+                <h3 className="font-display text-3xl text-ink">Mensaje enviado</h3>
+                <p className="text-muted text-sm leading-relaxed font-sans max-w-sm">
+                  Hemos recibido tu solicitud. Te contactaremos en menos de 24 horas.
+                  Revisa tu bandeja de entrada para ver la confirmación.
+                </p>
               </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <label className="block text-[10px] tracking-[0.2em] uppercase text-muted font-sans mb-3">
+                      Nombre *
+                    </label>
+                    <input
+                      name="nombre"
+                      required
+                      type="text"
+                      placeholder="Tu nombre"
+                      className={inputClass}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[10px] tracking-[0.2em] uppercase text-muted font-sans mb-3">
+                      Empresa *
+                    </label>
+                    <input
+                      name="empresa"
+                      required
+                      type="text"
+                      placeholder="Nombre de tu empresa"
+                      className={inputClass}
+                    />
+                  </div>
+                </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <label className="block text-[10px] tracking-[0.2em] uppercase text-muted font-sans mb-3">
+                      Email *
+                    </label>
+                    <input
+                      name="email"
+                      required
+                      type="email"
+                      placeholder="tu@empresa.com"
+                      className={inputClass}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[10px] tracking-[0.2em] uppercase text-muted font-sans mb-3">
+                      Teléfono
+                    </label>
+                    <input
+                      name="telefono"
+                      type="tel"
+                      placeholder="666 000 000"
+                      className={inputClass}
+                    />
+                  </div>
+                </div>
+
                 <div>
                   <label className="block text-[10px] tracking-[0.2em] uppercase text-muted font-sans mb-3">
-                    Email *
+                    Mensaje
                   </label>
-                  <input
-                    name="email"
-                    required
-                    type="email"
-                    placeholder="tu@empresa.com"
-                    className={inputClass}
+                  <textarea
+                    name="mensaje"
+                    rows={4}
+                    placeholder="Cuéntanos qué partidas de gasto quieres optimizar..."
+                    className={`${inputClass} resize-none`}
                   />
                 </div>
-                <div>
-                  <label className="block text-[10px] tracking-[0.2em] uppercase text-muted font-sans mb-3">
-                    Teléfono
-                  </label>
-                  <input
-                    name="telefono"
-                    type="tel"
-                    placeholder="666 000 000"
-                    className={inputClass}
-                  />
-                </div>
-              </div>
 
-              <div>
-                <label className="block text-[10px] tracking-[0.2em] uppercase text-muted font-sans mb-3">
-                  Mensaje
-                </label>
-                <textarea
-                  name="mensaje"
-                  rows={4}
-                  placeholder="Cuéntanos qué partidas de gasto quieres optimizar..."
-                  className={`${inputClass} resize-none`}
-                />
-              </div>
+                {status === "error" && (
+                  <div className="flex items-center gap-2 text-red-600 text-sm font-sans">
+                    <AlertCircle size={15} />
+                    <span>Ha ocurrido un error. Por favor, inténtalo de nuevo.</span>
+                  </div>
+                )}
 
-              <button
-                type="submit"
-                className="inline-flex items-center gap-3 bg-ink text-white px-10 py-4 text-sm font-sans font-semibold tracking-wide hover:bg-cobalt transition-all duration-300 group"
-              >
-                Enviar mensaje
-                <ArrowRight
-                  size={15}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
-              </button>
-            </form>
+                <button
+                  type="submit"
+                  disabled={status === "loading"}
+                  className="inline-flex items-center gap-3 bg-ink text-white px-10 py-4 text-sm font-sans font-semibold tracking-wide hover:bg-cobalt transition-all duration-300 group disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {status === "loading" ? (
+                    <>
+                      <Loader2 size={15} className="animate-spin" />
+                      Enviando...
+                    </>
+                  ) : (
+                    <>
+                      Enviar mensaje
+                      <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+                    </>
+                  )}
+                </button>
+              </form>
+            )}
           </motion.div>
         </div>
       </div>
