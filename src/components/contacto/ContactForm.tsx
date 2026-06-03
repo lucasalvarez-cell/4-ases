@@ -81,7 +81,7 @@ export default function ContactForm() {
               </a>
 
               <a
-                href="tel:+34666666666"
+                href="tel:+34677530426"
                 className="flex items-center gap-4 group"
               >
                 <div className="w-10 h-10 border border-border flex items-center justify-center group-hover:border-cobalt transition-all">
@@ -91,7 +91,7 @@ export default function ContactForm() {
                   <p className="text-[10px] text-muted uppercase tracking-wider font-sans mb-0.5">
                     Teléfono
                   </p>
-                  <p className="text-ink text-sm font-sans">666 666 666</p>
+                  <p className="text-ink text-sm font-sans">+34 677 53 04 26</p>
                 </div>
               </a>
             </div>
