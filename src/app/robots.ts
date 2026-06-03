@@ -1,8 +1,16 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://www.4asessales.com";
+import { getSiteUrl, shouldAllowIndexing } from "@/lib/siteUrl";
 
 export default function robots(): MetadataRoute.Robots {
+  if (!shouldAllowIndexing()) {
+    return {
+      rules: [{ userAgent: "*", disallow: "/" }],
+    };
+  }
+
+  const baseUrl = getSiteUrl();
+
   return {
     rules: [
       { userAgent: "*", allow: "/" },
@@ -12,6 +20,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Googlebot-Extended", allow: "/" },
       { userAgent: "cohere-ai", allow: "/" },
     ],
-    sitemap: `${BASE_URL}/sitemap.xml`,
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }

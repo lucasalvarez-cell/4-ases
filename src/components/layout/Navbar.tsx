@@ -36,7 +36,7 @@ export default function Navbar() {
             alt="4 Ases Sales"
             width={280}
             height={97}
-            className={`h-20 w-auto transition-all duration-500 ${
+            className={`h-28 w-auto transition-all duration-500 ${
               !scrolled ? "brightness-0 invert" : ""
             }`}
             priority

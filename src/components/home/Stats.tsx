@@ -5,24 +5,24 @@ import { motion } from "framer-motion";
 // PLACEHOLDER: replace XX values with real data before launch
 const metrics = [
   {
-    value: "XX+",      // PLACEHOLDER — real client count
-    label: "Empresas clientes",
-    desc: "De todos los sectores",
+    value: "100%",
+    label: "Transparencia",
+    desc: "En cada proceso y negociación",
   },
   {
-    value: "XX%",      // PLACEHOLDER — real average savings figure
-    label: "Ahorro medio",
-    desc: "En el primer año de colaboración",
+    value: "360°",
+    label: "Visión Integral",
+    desc: "Análisis completo de todas tus partidas",
+  },
+  {
+    value: "24/7",
+    label: "Disponibilidad",
+    desc: "Soporte continuo para tu empresa",
   },
   {
     value: "+10",
     label: "Años de experiencia",
     desc: "En optimización de costes empresariales",
-  },
-  {
-    value: "+200",
-    label: "Proveedores verificados",
-    desc: "Red propia de negociación",
   },
 ];
 

@@ -13,7 +13,7 @@ export default function Footer() {
               alt="4 Ases Sales"
               width={280}
               height={97}
-              className="h-20 w-auto mb-5"
+              className="h-28 w-auto mb-5"
             />
             <p className="text-muted text-sm leading-relaxed max-w-xs">
               Especialistas en optimización de gastos empresariales.
@@ -75,7 +75,7 @@ export default function Footer() {
               href="/contacto"
               className="inline-flex items-center gap-2 border border-ink text-ink text-sm px-6 py-3 hover:bg-ink hover:text-white transition-all tracking-wide font-sans"
             >
-              Solicitar reunión gratuita
+              Solicitar reunión
               <ArrowUpRight size={14} />
             </Link>
           </div>

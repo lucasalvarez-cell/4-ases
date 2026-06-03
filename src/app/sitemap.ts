@@ -1,23 +1,29 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://www.4asessales.com";
+import { getSiteUrl, shouldAllowIndexing } from "@/lib/siteUrl";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  if (!shouldAllowIndexing()) {
+    return [];
+  }
+
+  const baseUrl = getSiteUrl();
+
   return [
     {
-      url: BASE_URL,
+      url: baseUrl,
       lastModified: new Date("2026-05-27"),
     },
     {
-      url: `${BASE_URL}/nosotros`,
+      url: `${baseUrl}/nosotros`,
       lastModified: new Date("2026-05-27"),
     },
     {
-      url: `${BASE_URL}/servicios`,
+      url: `${baseUrl}/servicios`,
       lastModified: new Date("2026-05-27"),
     },
     {
-      url: `${BASE_URL}/contacto`,
+      url: `${baseUrl}/contacto`,
       lastModified: new Date("2026-05-27"),
     },
   ];

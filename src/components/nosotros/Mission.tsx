@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 
 const highlights = [
-  "Especialistas con más de 10 años en el sector",
-  "Red de más de 200 proveedores verificados",
+  "+20 años de experiencia en el sector",
+  "Red de más de 100 proveedores estratégicos",
   "Metodología probada con resultados tangibles",
   "Contratos transparentes sin permanencias obligatorias",
 ];
@@ -47,7 +47,7 @@ export default function Mission() {
             transition={{ duration: 0.7 }}
           >
             <div className="bg-cream p-10 border border-border">
-              <p className="font-display text-7xl text-cobalt mb-1">+10</p>
+              <p className="font-display text-7xl text-cobalt mb-1">+20</p>
               <p className="text-muted text-sm font-sans mb-10">
                 años de experiencia en el sector
               </p>

@@ -38,7 +38,7 @@ export default function HomeCTA() {
               href="/contacto"
               className="inline-flex items-center justify-center gap-3 bg-white text-ink px-10 py-4 text-sm font-sans font-semibold tracking-wide hover:bg-azure hover:text-white transition-all duration-300 group"
             >
-              Solicitar reunión gratuita
+              Solicitar reunión
               <ArrowRight
                 size={15}
                 className="group-hover:translate-x-1 transition-transform"

@@ -17,9 +17,9 @@ export default function NosotrosCTA() {
         >
           <div>
             <h2 className="font-display text-3xl md:text-4xl text-ink leading-tight mb-3">
-              ¿Quieres conocernos
+              ¿Listo para
               <br />
-              <span className="text-azure">en persona?</span>
+              <span className="text-azure">reducir tus costes?</span>
             </h2>
             <p className="text-muted text-sm font-sans leading-relaxed max-w-md">
               Agendemos una reunión sin compromiso. Sin costes, sin
@@ -32,7 +32,7 @@ export default function NosotrosCTA() {
             href="/contacto"
             className="inline-flex items-center gap-3 bg-navy text-white px-8 py-4 text-sm font-sans font-semibold tracking-wide hover:bg-cobalt transition-colors duration-300 group flex-shrink-0"
           >
-            Solicitar reunión gratuita
+            Solicitar reunión
             <ArrowRight
               size={15}
               className="group-hover:translate-x-1 transition-transform"

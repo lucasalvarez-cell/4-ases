@@ -22,7 +22,7 @@ export default function AboutHero() {
           transition={{ duration: 0.5 }}
           className="text-white/40 text-[10px] tracking-[0.4em] uppercase mb-6 font-sans"
         >
-          / Quiénes somos
+          / Quién somos
         </motion.p>
 
         <motion.h1
@@ -32,9 +32,9 @@ export default function AboutHero() {
           className="font-display font-normal text-white leading-[0.92] tracking-tight"
           style={{ fontSize: "clamp(44px, 6vw, 84px)" }}
         >
-          Más que una
+          La extensión del departamento
           <br />
-          <span className="text-azure">Central de Compras</span>
+          <span className="text-azure">de compras de nuestros propios clientes</span>
         </motion.h1>
       </div>
     </section>

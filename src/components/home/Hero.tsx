@@ -37,11 +37,11 @@ export default function Hero() {
           className="font-display font-normal text-white leading-[0.92] tracking-tight mb-8"
           style={{ fontSize: "clamp(52px, 7vw, 96px)" }}
         >
-          Reducimos
+          Especialistas en
           <br />
-          <span className="text-azure">los costes</span>
+          <span className="text-azure">optimización de</span>
           <br />
-          de tu empresa.
+          gastos empresariales
         </motion.h1>
 
         <motion.p
@@ -50,8 +50,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="text-white/75 text-base md:text-lg font-sans leading-relaxed mb-10 max-w-sm"
         >
-          Negociamos en tu nombre con más de 200 proveedores para
-          reducir lo que pagas en personal, suministros, lavanderías y más.
+          Transformamos la gestión de costes de tu empresa con
+          transparencia, experiencia y valor humano.
           Sin costes, sin permanencias.
         </motion.p>
 
@@ -65,7 +65,7 @@ export default function Hero() {
             href="/contacto"
             className="inline-flex items-center gap-3 bg-white text-ink px-8 py-4 text-sm font-sans font-semibold tracking-wide hover:bg-azure hover:text-white transition-all duration-300 group"
           >
-            Solicitar reunión gratuita
+            Solicitar reunión
             <ArrowRight
               size={15}
               className="group-hover:translate-x-1 transition-transform"
