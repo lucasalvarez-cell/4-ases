@@ -85,9 +85,21 @@ export default function Footer() {
           <p className="text-muted text-xs">
             © {new Date().getFullYear()} 4 Ases Sales. Todos los derechos reservados.
           </p>
-          <p className="text-muted text-xs italic font-display">
-            Excelencia en precios, confianza en proveedores.
-          </p>
+          <div className="flex items-center gap-5">
+            {[
+              { href: "/aviso-legal", label: "Aviso Legal" },
+              { href: "/politica-de-privacidad", label: "Privacidad" },
+              { href: "/politica-de-cookies", label: "Cookies" },
+            ].map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="text-muted text-xs hover:text-ink transition-colors"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

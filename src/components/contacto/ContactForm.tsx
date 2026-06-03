@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Mail, Phone, ArrowRight, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { FormEvent, useState } from "react";
@@ -187,6 +188,23 @@ export default function ContactForm() {
                     placeholder="Cuéntanos qué partidas de gasto quieres optimizar..."
                     className={`${inputClass} resize-none`}
                   />
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <input
+                    id="privacidad"
+                    name="privacidad"
+                    type="checkbox"
+                    required
+                    className="mt-0.5 h-4 w-4 shrink-0 accent-ink cursor-pointer"
+                  />
+                  <label htmlFor="privacidad" className="text-muted text-xs font-sans leading-relaxed cursor-pointer">
+                    He leído y acepto la{" "}
+                    <Link href="/politica-de-privacidad" className="text-ink underline underline-offset-2 hover:text-cobalt transition-colors">
+                      Política de Privacidad
+                    </Link>
+                    . Consiento el tratamiento de mis datos para gestionar mi solicitud de contacto.
+                  </label>
                 </div>
 
                 {status === "error" && (
