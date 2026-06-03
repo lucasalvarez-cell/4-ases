@@ -20,7 +20,7 @@ const metrics = [
     desc: "Soporte continuo para tu empresa",
   },
   {
-    value: "+10",
+    value: "+20",
     label: "Años de experiencia",
     desc: "En optimización de costes empresariales",
   },
