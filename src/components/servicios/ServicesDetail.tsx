@@ -7,9 +7,9 @@ import Image from "next/image";
 const services = [
   {
     num: "01",
-    slug: "personal-ett",
-    title: "Personal y ETT",
-    desc: "Gestionamos la relación con Empresas de Trabajo Temporal para optimizar costes laborales y reducir cargas administrativas. Auditamos contratos actuales, negociamos coeficientes y tarifas, y monitorizamos el cumplimiento mensual para que tu empresa siempre esté en la mejor posición.",
+    slug: "outsourcing-ett",
+    title: "Outsourcing y ETT",
+    desc: "Optimización de recursos humanos y soluciones de trabajo temporal adaptadas a la operativa de cada establecimiento. Gestionamos la relación con ETTs, auditamos contratos, negociamos coeficientes y monitorizamos el cumplimiento para que siempre estés en la mejor posición.",
     points: [
       "Auditoría de contratos y coeficientes ETT",
       "Negociación de tarifas y condiciones",
@@ -18,28 +18,13 @@ const services = [
       "Seguimiento continuo del servicio",
     ],
     photo:
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=900&q=80",
   },
   {
     num: "02",
-    slug: "suministros",
-    title: "Suministros",
-    desc: "Electricidad, gas, agua y telecomunicaciones. Analizamos tu consumo actual y negociamos con los principales proveedores del mercado para conseguir tarifas que una empresa individual no puede obtener por su volumen de compra.",
-    points: [
-      "Auditoría de consumos y contratos vigentes",
-      "Cambio de proveedor sin interrupciones",
-      "Negociación de tarifas fijas y variables",
-      "Optimización de potencia contratada",
-      "Gestión de incidencias con proveedores",
-    ],
-    photo:
-      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    num: "03",
-    slug: "lavanderias",
-    title: "Lavanderías",
-    desc: "Diseñamos y gestionamos el servicio de lavandería industrial para hoteles, residencias sanitarias, clínicas y grandes instalaciones. Desde la licitación hasta el control de calidad, gestionamos el proceso completo para garantizar un servicio sin interrupciones.",
+    slug: "lavanderia-textil",
+    title: "Lavandería y Textil",
+    desc: "Mejora de costes, calidad de servicio y eficiencia en los procesos de lavandería y suministro textil. Diseñamos y gestionamos el servicio de lavandería industrial para hoteles, residencias sanitarias y grandes instalaciones, desde la licitación hasta el control de calidad.",
     points: [
       "Licitación y selección de proveedores",
       "Definición de estándares de calidad",
@@ -51,19 +36,64 @@ const services = [
       "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=900&q=80",
   },
   {
-    num: "04",
-    slug: "otros-servicios",
-    title: "Otros Servicios",
-    desc: "Limpieza, vigilancia, mantenimiento, seguros y cualquier otra partida de gasto operativo de tu empresa. Si se puede optimizar, lo analizamos. Nuestro equipo identifica oportunidades de ahorro en categorías que habitualmente se dan por inamovibles.",
+    num: "03",
+    slug: "food-beverage",
+    title: "Food & Beverage (F&B)",
+    desc: "Café, vending, bebidas, restauración y soluciones para huéspedes y empleados. Negociamos con proveedores de alimentación y bebidas para optimizar costes sin comprometer la calidad de la experiencia gastronómica de tu establecimiento.",
     points: [
-      "Análisis de oportunidades por categoría",
-      "Benchmarking con empresas del sector",
-      "Negociación con proveedores alternativos",
-      "Revisión periódica de condiciones",
-      "Gestión integral de contratos",
+      "Auditoría de proveedores y contratos vigentes",
+      "Negociación de tarifas con distribuidores",
+      "Optimización de carta y escandallos",
+      "Gestión de máquinas de vending y café",
+      "Control de mermas y desperdicio alimentario",
     ],
     photo:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    num: "04",
+    slug: "menaje-amenities",
+    title: "Menaje y Amenities",
+    desc: "Artículos de cortesía, menaje de habitaciones y productos que contribuyen a la experiencia del huésped. Seleccionamos y negociamos los mejores proveedores para que cada detalle refleje el nivel de tu establecimiento al mejor coste posible.",
+    points: [
+      "Selección y homologación de proveedores",
+      "Negociación de tarifas y volúmenes",
+      "Control de stock y reposición",
+      "Personalización de amenities según categoría",
+      "Gestión de novedades y tendencias del sector",
+    ],
+    photo:
+      "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    num: "05",
+    slug: "mantenimiento-quimicos",
+    title: "Mantenimiento y Productos Químicos",
+    desc: "Soluciones para mantenimiento preventivo y correctivo, productos químicos profesionales, piscinas, limpieza técnica y eficiencia operativa de las instalaciones. Optimizamos contratos de mantenimiento y suministro de productos para maximizar la vida útil de tus activos.",
+    points: [
+      "Auditoría de contratos de mantenimiento",
+      "Negociación con proveedores de productos químicos",
+      "Mantenimiento preventivo y correctivo",
+      "Gestión de tratamiento de piscinas",
+      "Limpieza técnica e higienización industrial",
+    ],
+    photo:
+      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    num: "06",
+    slug: "proyectos-medida",
+    title: "Proyectos a Medida",
+    desc: "Gestión integral de reformas, adecuaciones y construcción de nuevas aperturas, ofreciendo soluciones completas llave en mano desde la planificación hasta la entrega final del proyecto. Coordinamos todos los agentes implicados para cumplir plazos y presupuestos.",
+    points: [
+      "Planificación y gestión de obras",
+      "Coordinación de contratistas y proveedores",
+      "Control de presupuesto y plazos",
+      "Nuevas aperturas llave en mano",
+      "Reformas y adecuaciones de locales",
+    ],
+    photo:
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80",
   },
 ];
 
