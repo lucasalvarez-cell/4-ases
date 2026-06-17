@@ -18,7 +18,7 @@ const services = [
       "Seguimiento continuo del servicio",
     ],
     photo:
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=900&q=80",
+      "/limpieza.png",
   },
   {
     num: "02",
@@ -33,7 +33,7 @@ const services = [
       "Optimización de frecuencias y volúmenes",
     ],
     photo:
-      "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=900&q=80",
+      "/lavanderia.png",
   },
   {
     num: "03",
