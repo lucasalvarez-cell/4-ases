@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
 import Stats from "@/components/home/Stats";
 import Services from "@/components/home/Services";
-import Testimonials from "@/components/home/Testimonials";
 import WhyUs from "@/components/home/WhyUs";
 import HomeCTA from "@/components/home/HomeCTA";
 
@@ -24,7 +23,6 @@ export default function Home() {
       <Hero />
       <Stats />
       <Services />
-      <Testimonials />
       <WhyUs />
       <HomeCTA />
     </main>
