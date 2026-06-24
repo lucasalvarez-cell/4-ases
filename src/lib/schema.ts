@@ -1,4 +1,4 @@
-const BASE_URL = "https://www.4asessales.com";
+const BASE_URL = "https://www.4asess.com";
 
 export const organizationSchema = {
   "@context": "https://schema.org",
@@ -11,6 +11,14 @@ export const organizationSchema = {
   address: {
     "@type": "PostalAddress",
     addressCountry: "ES",
+    addressLocality: "España",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+34-677-530-426",
+    contactType: "customer service",
+    email: "proyectos@4asess.com",
+    availableLanguage: "Spanish",
   },
   sameAs: [],
 };

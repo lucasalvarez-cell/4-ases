@@ -6,10 +6,12 @@
 
 ## Servicios
 
-- **Personal y ETT**: Optimización de costes de personal temporal y servicios de ETT
-- **Suministros**: Reducción de gastos en electricidad, gas, agua y otros suministros
-- **Lavanderías**: Gestión y optimización de servicios de lavandería industrial
-- **Otros servicios**: Telecomunicaciones, seguros, y otras partidas de gasto empresarial
+- **Outsourcing y ETT**: Optimización de costes de personal temporal y servicios de ETT
+- **Lavandería y Textil**: Gestión y optimización de servicios de lavandería industrial
+- **Food & Beverage (F&B)**: Optimización de costes en alimentación y bebidas para hostelería
+- **Menaje y Amenities**: Reducción de gastos en menaje, vajilla y productos de acogida
+- **Mantenimiento y Productos Químicos**: Gestión de proveedores de mantenimiento y limpieza
+- **Proyectos a Medida**: Soluciones personalizadas para partidas de gasto específicas
 
 ## Sectores
 
@@ -17,20 +19,22 @@ Hostelería, Industria, Retail, Sanidad, Servicios profesionales
 
 ## Páginas principales
 
-- [Inicio](https://www.4asessales.com): Propuesta de valor y resumen de servicios
-- [Nosotros](https://www.4asessales.com/nosotros): Equipo, valores y metodología de trabajo
-- [Servicios](https://www.4asessales.com/servicios): Detalle de todas las áreas de optimización
-- [Contacto](https://www.4asessales.com/contacto): Formulario de contacto y datos de la empresa
+- [Inicio](https://www.4asess.com): Propuesta de valor y resumen de servicios
+- [Nosotros](https://www.4asess.com/nosotros): Equipo, valores y metodología de trabajo
+- [Servicios](https://www.4asess.com/servicios): Detalle de todas las áreas de optimización
+- [Contacto](https://www.4asess.com/contacto): Formulario de contacto y datos de la empresa
 
 ## Propuesta de valor
 
 - Sin costes de incorporación
 - Sin permanencias
 - Transparencia total: sin comisiones ocultas
-- Más de 10 años de experiencia en el sector
+- Más de 20 años de experiencia en el sector
 - Red propia de más de 200 proveedores verificados
 - Seguimiento activo y mejora continua
 
 ## Contacto
 
-Web: https://www.4asessales.com
+Web: https://www.4asess.com
+Email: proyectos@4asess.com
+Teléfono: +34 677 53 04 26

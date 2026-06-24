@@ -19,13 +19,13 @@ export default function AvisoLegalPage() {
         <li><strong>NIF / CIF:</strong> B16446908</li>
         <li><strong>Domicilio:</strong> Calle Perez Alvarez 90-92, Bajos 3º, 08980, Sant Feliu de Llobregat, Barcelona</li>
         <li><strong>Correo electrónico:</strong> <a href="mailto:Proyectos@4asess.com">Proyectos@4asess.com</a></li>
-        <li><strong>Sitio web:</strong> <a href="https://www.4asessales.com">www.4asessales.com</a></li>
+        <li><strong>Sitio web:</strong> <a href="https://www.4asess.com">www.4asess.com</a></li>
         <li><strong>Datos registrales:</strong> Inscrita en el Registro Mercantil de Barcelona <em className="placeholder">(tomo y folio pendientes de completar)</em></li>
       </ul>
 
       <h2>2. Objeto y ámbito de aplicación</h2>
       <p>
-        El presente Aviso Legal regula el acceso y uso del sitio web <strong>www.4asessales.com</strong> (en adelante, el «Sitio»), titularidad de 4 Ases Sales. El acceso al Sitio implica la aceptación plena de las condiciones aquí recogidas.
+        El presente Aviso Legal regula el acceso y uso del sitio web <strong>www.4asess.com</strong> (en adelante, el «Sitio»), titularidad de 4 Ases Sales. El acceso al Sitio implica la aceptación plena de las condiciones aquí recogidas.
       </p>
 
       <h2>3. Propiedad intelectual e industrial</h2>

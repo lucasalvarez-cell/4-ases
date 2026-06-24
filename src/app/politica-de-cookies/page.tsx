@@ -17,7 +17,7 @@ export default function PoliticaCookiesPage() {
 
       <h2>2. ¿Usa este sitio web cookies?</h2>
       <p>
-        <strong>www.4asessales.com no utiliza cookies propias de análisis, publicidad ni seguimiento.</strong> No instalamos ninguna cookie en su dispositivo para medir su comportamiento ni para mostrарle publicidad personalizada.
+        <strong>www.4asess.com no utiliza cookies propias de análisis, publicidad ni seguimiento.</strong> No instalamos ninguna cookie en su dispositivo para medir su comportamiento ni para mostrарle publicidad personalizada.
       </p>
       <p>El Sitio puede generar únicamente cookies de carácter técnico estrictamente necesarias para su funcionamiento correcto, como las de sesión del servidor, que se eliminan automáticamente al cerrar el navegador.</p>
 

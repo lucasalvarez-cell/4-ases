@@ -4,7 +4,7 @@ import { headers } from "next/headers";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const OWNER_EMAIL = process.env.OWNER_EMAIL ?? "Proyectos@4asess.com";
-const FROM_EMAIL = "4 Ases Sales <noreply@4asessales.com>";
+const FROM_EMAIL = "4 Ases Sales <noreply@4asess.com>";
 
 // Strict email format check
 const EMAIL_RE = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
@@ -113,7 +113,7 @@ function ownerEmailHtml(p: Record<string, string>) {
           </p>
         </td></tr>
         <tr><td style="background:#f5f4f0;padding:20px 40px;border-top:1px solid #e5e4e0;">
-          <p style="margin:0;color:#94a3b8;font-size:11px;">4 Ases Sales · www.4asessales.com</p>
+          <p style="margin:0;color:#94a3b8;font-size:11px;">4 Ases Sales · www.4asess.com</p>
         </td></tr>
       </table>
     </td></tr>
@@ -154,13 +154,13 @@ function clientEmailHtml({ nombre }: { nombre: string }) {
           <table cellpadding="0" cellspacing="0" style="border-left:3px solid #1a6fb5;padding-left:20px;margin-bottom:32px;">
             <tr><td>
               <p style="margin:0 0 6px;color:#0f172a;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">¿Mientras tanto?</p>
-              <p style="margin:0;color:#64748b;font-size:13px;line-height:1.6;">Puedes conocer más sobre nuestros servicios en <a href="https://www.4asessales.com" style="color:#1a6fb5;">www.4asessales.com</a></p>
+              <p style="margin:0;color:#64748b;font-size:13px;line-height:1.6;">Puedes conocer más sobre nuestros servicios en <a href="https://www.4asess.com" style="color:#1a6fb5;">www.4asess.com</a></p>
             </td></tr>
           </table>
           <p style="margin:0;color:#475569;font-size:14px;">Un saludo,<br /><strong style="color:#0f172a;">El equipo de 4 Ases Sales</strong></p>
         </td></tr>
         <tr><td style="background:#f5f4f0;padding:20px 40px;border-top:1px solid #e5e4e0;">
-          <p style="margin:0;color:#94a3b8;font-size:11px;">4 Ases Sales · www.4asessales.com · Si no esperabas este email, ignóralo.</p>
+          <p style="margin:0;color:#94a3b8;font-size:11px;">4 Ases Sales · www.4asess.com · Si no esperabas este email, ignóralo.</p>
         </td></tr>
       </table>
     </td></tr>

@@ -13,7 +13,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.4asessales.com"),
+  metadataBase: new URL("https://www.4asess.com"),
   title: "4 Ases Sales | Especialistas en Optimización de Gastos Empresariales",
   description:
     "Transformamos la gestión de costes de tu empresa con transparencia, experiencia y valor humano.",
