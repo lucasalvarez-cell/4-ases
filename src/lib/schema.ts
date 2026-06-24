@@ -20,7 +20,9 @@ export const organizationSchema = {
     email: "proyectos@4asess.com",
     availableLanguage: "Spanish",
   },
-  sameAs: [],
+  sameAs: [
+    "https://www.linkedin.com/company/4-ases-sales",
+  ],
 };
 
 export const websiteSchema = {
