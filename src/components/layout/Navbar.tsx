@@ -89,12 +89,20 @@ export default function Navbar() {
       </nav>
 
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-border px-8 pb-6">
+        <div className={`md:hidden px-8 pb-6 border-t transition-colors ${
+          scrolled
+            ? "bg-white border-border"
+            : "bg-ink/95 backdrop-blur-md border-white/10"
+        }`}>
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="block text-ink/70 hover:text-ink py-3.5 text-sm border-b border-border last:border-0"
+              className={`block py-3.5 text-sm border-b last:border-0 transition-colors ${
+                scrolled
+                  ? "text-ink/70 hover:text-ink border-border"
+                  : "text-white/70 hover:text-white border-white/10"
+              }`}
               onClick={() => setMobileOpen(false)}
             >
               {l.label}
@@ -102,7 +110,11 @@ export default function Navbar() {
           ))}
           <Link
             href="/contacto"
-            className="mt-4 block border border-navy text-navy text-center py-3 text-sm font-medium hover:bg-navy hover:text-white transition-all"
+            className={`mt-4 block border text-center py-3 text-sm font-medium transition-all ${
+              scrolled
+                ? "border-navy text-navy hover:bg-navy hover:text-white"
+                : "border-white/40 text-white hover:bg-white hover:text-ink"
+            }`}
             onClick={() => setMobileOpen(false)}
           >
             Contacto
