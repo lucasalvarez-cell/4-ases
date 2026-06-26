@@ -63,7 +63,7 @@ const services = [
       "Gestión de novedades y tendencias del sector",
     ],
     photo:
-      "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=900&q=80",
+      "/menaje-amenities.png",
   },
   {
     num: "05",

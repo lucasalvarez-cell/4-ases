@@ -30,7 +30,7 @@ const services = [
     title: "Lavanderías",
     desc: "Servicios de lavandería industrial optimizados para los sectores hotelero, sanitario y corporativo.",
     photo: true,
-    photoUrl: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=800&q=80",
+    photoUrl: "/lavanderia.png",
     dark: true,
   },
   {
