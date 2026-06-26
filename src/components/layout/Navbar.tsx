@@ -89,10 +89,10 @@ export default function Navbar() {
       </nav>
 
       {mobileOpen && (
-        <div className={`md:hidden px-8 pb-6 border-t transition-colors ${
+        <div className={`md:hidden px-8 pb-6 border-t backdrop-blur-xl transition-colors ${
           scrolled
-            ? "bg-white border-border"
-            : "bg-ink/95 backdrop-blur-md border-white/10"
+            ? "bg-white/80 border-border"
+            : "bg-ink/50 border-white/10"
         }`}>
           {links.map((l) => (
             <Link
