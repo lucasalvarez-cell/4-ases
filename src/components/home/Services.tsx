@@ -46,8 +46,8 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="servicios" className="py-20 bg-white border-t border-border">
-      <div className="max-w-7xl mx-auto px-8">
+    <section id="servicios" className="py-20 bg-white border-t border-border overflow-hidden">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
@@ -68,86 +68,39 @@ export default function Services() {
           </Link>
         </div>
 
-        {/* Bento grid */}
-        <div className="grid grid-cols-2 grid-rows-2 gap-3 h-[560px] md:h-[620px]">
-          {services.map((s, i) => {
-            if (s.photo) {
-              return (
-                <Link key={s.num} href={`/servicios#${s.slug}`}>
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.97 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
-                    className="relative overflow-hidden group cursor-pointer h-full"
-                  >
-                    <Image
-                      src={s.photoUrl}
-                      alt={s.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
-                    <div className="absolute bottom-0 left-0 p-6 md:p-8">
-                      <p className="text-white/40 text-[10px] tracking-[0.3em] font-sans mb-2">
-                        {s.num}
-                      </p>
-                      <h3 className="font-display text-2xl md:text-3xl text-white font-medium mb-2">
-                        {s.title}
-                      </h3>
-                      <p className="text-white/60 text-sm font-sans leading-relaxed max-w-xs">
-                        {s.desc}
-                      </p>
-                    </div>
-                  </motion.div>
-                </Link>
-              );
-            }
-
-            return (
-              <Link key={s.num} href={`/servicios#${s.slug}`}>
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.97 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className={`p-6 md:p-8 flex flex-col justify-between h-full cursor-pointer ${
-                    s.dark ? "bg-navy" : "bg-white"
-                  }`}
-                >
-                  <div>
-                    <p
-                      className={`text-[10px] tracking-[0.3em] font-sans mb-4 ${
-                        s.dark ? "text-white/30" : "text-muted"
-                      }`}
-                    >
-                      {s.num}
-                    </p>
-                    <h3
-                      className={`font-display text-2xl md:text-3xl font-medium mb-3 ${
-                        s.dark ? "text-white" : "text-ink"
-                      }`}
-                    >
-                      {s.title}
-                    </h3>
-                    <p
-                      className={`text-sm font-sans leading-relaxed ${
-                        s.dark ? "text-white/55" : "text-muted"
-                      }`}
-                    >
-                      {s.desc}
-                    </p>
-                  </div>
-                  <div
-                    className={`w-8 h-px mt-6 ${
-                      s.dark ? "bg-azure" : "bg-cobalt"
-                    }`}
-                  />
-                </motion.div>
-              </Link>
-            );
-          })}
+        {/* Grid: single column on mobile, 2×2 bento on sm+ */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 gap-3 sm:h-[560px] md:h-[620px]">
+          {services.map((s, i) => (
+            <Link key={s.num} href={`/servicios#${s.slug}`} className="h-[260px] sm:h-full block">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.97 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="relative overflow-hidden group cursor-pointer h-full"
+              >
+                <Image
+                  src={s.photoUrl}
+                  alt={s.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 p-5 sm:p-6 md:p-8">
+                  <p className="text-white/40 text-[10px] tracking-[0.3em] font-sans mb-2">
+                    {s.num}
+                  </p>
+                  <h3 className="font-display text-2xl md:text-3xl text-white font-medium mb-1.5 sm:mb-2">
+                    {s.title}
+                  </h3>
+                  <p className="text-white/60 text-xs sm:text-sm font-sans leading-relaxed max-w-xs">
+                    {s.desc}
+                  </p>
+                </div>
+              </motion.div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
