@@ -34,6 +34,8 @@ export default function Navbar() {
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         scrolled
           ? "bg-white/96 backdrop-blur-md border-b border-border shadow-sm"
+          : mobileOpen
+          ? "bg-ink/50 backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
@@ -89,10 +91,10 @@ export default function Navbar() {
       </nav>
 
       {mobileOpen && (
-        <div className={`md:hidden px-8 pb-6 border-t backdrop-blur-xl transition-colors ${
+        <div className={`md:hidden px-8 pb-6 border-t transition-colors ${
           scrolled
-            ? "bg-white/80 border-border"
-            : "bg-ink/50 border-white/10"
+            ? "bg-white/80 backdrop-blur-md border-border"
+            : "bg-transparent border-white/10"
         }`}>
           {links.map((l) => (
             <Link
