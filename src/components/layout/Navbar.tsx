@@ -31,11 +31,11 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-500 backdrop-blur-md ${
         scrolled
-          ? "bg-white/96 backdrop-blur-md border-b border-border shadow-sm"
+          ? "bg-white/96 border-b border-border shadow-sm"
           : mobileOpen
-          ? "bg-ink/50 backdrop-blur-xl"
+          ? "bg-ink/50"
           : "bg-transparent"
       }`}
     >
