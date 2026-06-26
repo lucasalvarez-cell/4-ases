@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ContactHero() {
   return (
-    <section className="relative h-[55vh] min-h-[440px] overflow-hidden">
+    <section className="relative h-[55vh] min-h-[360px] sm:min-h-[440px] overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -15,7 +15,7 @@ export default function ContactHero() {
       <div className="absolute inset-0 bg-gradient-to-r from-ink/88 via-ink/60 to-ink/20" />
       <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent" />
 
-      <div className="relative h-full max-w-7xl mx-auto px-8 flex flex-col justify-end pb-20">
+      <div className="relative h-full max-w-7xl mx-auto px-5 sm:px-8 flex flex-col justify-end pb-10 sm:pb-20">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}

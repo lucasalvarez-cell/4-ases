@@ -6,8 +6,8 @@ import { ArrowRight } from "lucide-react";
 
 export default function About() {
   return (
-    <section className="py-24 bg-white border-t border-border">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="py-12 sm:py-24 bg-white border-t border-border">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}

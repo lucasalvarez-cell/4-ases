@@ -12,9 +12,9 @@ const highlights = [
 
 export default function Mission() {
   return (
-    <section className="py-24 bg-white border-t border-border">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="py-12 sm:py-24 bg-white border-t border-border">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -46,7 +46,7 @@ export default function Mission() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <div className="bg-cream p-10 border border-border">
+            <div className="bg-cream p-6 sm:p-10 border border-border">
               <p className="font-display text-7xl text-cobalt mb-1">+20</p>
               <p className="text-muted text-sm font-sans mb-10">
                 años de experiencia en el sector

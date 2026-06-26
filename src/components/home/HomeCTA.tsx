@@ -6,7 +6,7 @@ import { ArrowRight, Mail } from "lucide-react";
 
 export default function HomeCTA() {
   return (
-    <section className="relative py-40 overflow-hidden">
+    <section className="relative py-20 sm:py-40 overflow-hidden">
       {/* Background photo */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -17,7 +17,7 @@ export default function HomeCTA() {
       />
       <div className="absolute inset-0 bg-ink/78" />
 
-      <div className="relative max-w-4xl mx-auto px-8 text-center">
+      <div className="relative max-w-4xl mx-auto px-5 sm:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}

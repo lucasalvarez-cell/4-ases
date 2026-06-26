@@ -40,9 +40,9 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="py-24 bg-white border-t border-border">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+    <section className="py-12 sm:py-24 bg-white border-t border-border">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           {/* Sidebar */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}

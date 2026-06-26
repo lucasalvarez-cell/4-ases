@@ -28,8 +28,8 @@ const metrics = [
 
 export default function Stats() {
   return (
-    <section className="py-20 bg-cream border-t border-border">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="py-10 sm:py-20 bg-cream border-t border-border">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 divide-y-2 lg:divide-y-0 lg:divide-x divide-border">
           {metrics.map((m, i) => (
             <motion.div
@@ -38,7 +38,7 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="py-10 px-8 first:pl-0 last:pr-0"
+              className="py-6 sm:py-10 px-4 sm:px-8 first:pl-0 last:pr-0"
             >
               <p className="font-display text-5xl md:text-6xl font-bold text-ink leading-none mb-3">
                 {m.value}

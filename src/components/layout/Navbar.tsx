@@ -39,7 +39,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-8 h-24 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-8 h-20 sm:h-24 flex items-center justify-between">
         <Link href="/">
           <Image
             src="/logo.png"
@@ -91,7 +91,7 @@ export default function Navbar() {
       </nav>
 
       {mobileOpen && (
-        <div className={`md:hidden px-8 pb-6 border-t transition-colors ${
+        <div className={`md:hidden px-4 sm:px-8 pb-6 border-t transition-colors ${
           scrolled
             ? "bg-white/80 backdrop-blur-md border-border"
             : "bg-transparent border-white/10"

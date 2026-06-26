@@ -33,8 +33,8 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="py-20 bg-cream border-t border-border">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="py-10 sm:py-20 bg-cream border-t border-border">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="mb-12">
           <p className="text-[10px] tracking-[0.35em] text-muted uppercase font-sans mb-4">
             / Por Qué Elegirnos

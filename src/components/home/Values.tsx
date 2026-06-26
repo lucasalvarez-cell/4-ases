@@ -34,8 +34,8 @@ const values = [
 
 export default function Values() {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-12 sm:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <SectionBadge>Quiénes Somos</SectionBadge>
           <h2 className="text-4xl md:text-5xl font-black text-midnight mb-4">
@@ -54,7 +54,7 @@ export default function Values() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={`group rounded-2xl p-8 border border-gray-100 hover:border-azure/25 hover:shadow-lg hover:shadow-azure/5 hover:-translate-y-1 transition-all duration-300 ${
+              className={`group rounded-2xl p-5 sm:p-8 border border-gray-100 hover:border-azure/25 hover:shadow-lg hover:shadow-azure/5 hover:-translate-y-1 transition-all duration-300 ${
                 i === 4 ? "sm:col-span-2 lg:col-span-1" : ""
               }`}
             >
@@ -73,7 +73,7 @@ export default function Values() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-2xl overflow-hidden text-center p-10 md:p-14"
+          className="relative rounded-2xl overflow-hidden text-center p-6 sm:p-10 md:p-14"
           style={{
             background: "linear-gradient(135deg, #1B3A6B 0%, #1565C0 100%)",
           }}

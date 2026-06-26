@@ -39,8 +39,8 @@ const cardBase =
 
 export default function TeamValues() {
   return (
-    <section className="py-20 bg-cream border-t border-border">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="py-10 sm:py-20 bg-cream border-t border-border">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export default function TeamValues() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className={`${cardBase} p-10 min-h-[210px]`}
+              className={`${cardBase} p-6 sm:p-10 min-h-[210px]`}
             >
               <div className="w-12 h-12 bg-blue-50 flex items-center justify-center flex-shrink-0">
                 <Icon size={22} className="text-azure" strokeWidth={1.5} />
@@ -82,7 +82,7 @@ export default function TeamValues() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 + i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className={`${cardBase} p-8 min-h-[190px]`}
+              className={`${cardBase} p-5 sm:p-8 min-h-[190px]`}
             >
               <div className="w-11 h-11 bg-blue-50 flex items-center justify-center flex-shrink-0">
                 <Icon size={20} className="text-azure" strokeWidth={1.5} />

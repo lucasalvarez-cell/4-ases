@@ -6,8 +6,8 @@ import { ArrowRight } from "lucide-react";
 
 export default function NosotrosCTA() {
   return (
-    <section className="py-20 bg-white border-t border-border">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="py-10 sm:py-20 bg-white border-t border-border">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

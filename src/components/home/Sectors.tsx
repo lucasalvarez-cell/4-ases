@@ -12,8 +12,8 @@ const sectors = [
 
 export default function Sectors() {
   return (
-    <section className="py-16 bg-white border-t border-border">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="py-10 sm:py-16 bg-white border-t border-border">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-16">
           <p className="text-[10px] tracking-[0.35em] text-muted uppercase font-sans flex-shrink-0 whitespace-nowrap">
             Sectores

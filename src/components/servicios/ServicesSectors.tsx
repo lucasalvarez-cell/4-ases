@@ -32,8 +32,8 @@ const sectors = [
 
 export default function ServicesSectors() {
   return (
-    <section className="py-24 bg-cream border-t border-border">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="py-12 sm:py-24 bg-cream border-t border-border">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="mb-14">
           <h2 className="font-display text-4xl md:text-5xl text-ink leading-tight">
             Sectores que
@@ -50,7 +50,7 @@ export default function ServicesSectors() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.6 }}
-              className="bg-cream p-8 flex flex-col gap-5"
+              className="bg-cream p-5 sm:p-8 flex flex-col gap-5"
             >
               <h3 className="font-display text-xl text-ink">{s.name}</h3>
               <p className="text-muted text-sm font-sans leading-relaxed flex-1">

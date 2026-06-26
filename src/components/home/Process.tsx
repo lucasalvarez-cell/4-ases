@@ -27,8 +27,8 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="py-20 bg-cream">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="py-10 sm:py-20 bg-cream">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="mb-16">
           <h2 className="font-display text-4xl md:text-5xl text-ink leading-tight mb-4">
             Cómo Trabajamos

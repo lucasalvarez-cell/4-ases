@@ -9,8 +9,8 @@ interface Props {
 
 export default function LegalLayout({ title, updated, children }: Props) {
   return (
-    <main className="min-h-screen bg-white pt-32 pb-24">
-      <div className="max-w-3xl mx-auto px-8">
+    <main className="min-h-screen bg-white pt-20 sm:pt-32 pb-12 sm:pb-24">
+      <div className="max-w-3xl mx-auto px-5 sm:px-8">
         <Link
           href="/"
           className="inline-flex items-center gap-2 text-muted text-xs uppercase tracking-widest font-sans hover:text-ink transition-colors mb-12"

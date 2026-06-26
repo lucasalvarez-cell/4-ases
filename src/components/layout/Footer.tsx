@@ -5,7 +5,7 @@ import { Mail, Phone, ArrowUpRight } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-cream border-t border-border">
-      <div className="max-w-7xl mx-auto px-8 py-16">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 py-10 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 mb-14">
           <div className="md:col-span-4">
             <Image

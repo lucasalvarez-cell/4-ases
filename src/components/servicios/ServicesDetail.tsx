@@ -100,7 +100,7 @@ const services = [
 export default function ServicesDetail() {
   return (
     <section className="bg-white">
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         {services.map((s, i) => {
           const isEven = i % 2 === 0;
           return (
