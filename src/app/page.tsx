@@ -9,11 +9,15 @@ export const metadata: Metadata = {
   title: "4 Ases Sales | Reducimos los Costes de tu Empresa",
   description:
     "Central de compras especializada en optimización de gastos empresariales. Reducimos lo que pagas en personal, suministros y más. Sin costes, sin permanencias.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "4 Ases Sales | Reducimos los Costes de tu Empresa",
     description:
       "Central de compras especializada en optimización de gastos empresariales. Sin costes, sin permanencias.",
     url: "/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "4 Ases Sales" }],
   },
 };
 

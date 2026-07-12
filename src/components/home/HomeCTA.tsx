@@ -2,18 +2,19 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Mail } from "lucide-react";
 
 export default function HomeCTA() {
   return (
     <section className="relative py-20 sm:py-40 overflow-hidden">
       {/* Background photo */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1920&q=80')",
-        }}
+      <Image
+        src="/cta-home.jpg"
+        alt=""
+        fill
+        className="object-cover"
+        sizes="100vw"
       />
       <div className="absolute inset-0 bg-ink/78" />
 

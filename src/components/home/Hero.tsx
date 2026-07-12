@@ -2,18 +2,20 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
     <section className="relative min-h-[100dvh] flex flex-col overflow-hidden">
       {/* Background photo */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1920&q=80')",
-        }}
+      <Image
+        src="/hero-home.jpg"
+        alt=""
+        fill
+        priority
+        className="object-cover"
+        sizes="100vw"
       />
       {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/60 to-ink/20" />
@@ -31,8 +33,8 @@ export default function Hero() {
         </motion.p>
 
         <motion.h1
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: 28 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           className="font-display font-normal text-white leading-[0.92] tracking-tight mb-6 md:mb-8"
           style={{ fontSize: "clamp(38px, 7vw, 96px)" }}

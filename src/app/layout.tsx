@@ -39,9 +39,6 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es" className={geist.variable}>
-      <head>
-        <link rel="preconnect" href="https://images.unsplash.com" />
-      </head>
       <body className="font-sans antialiased bg-white text-ink">
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />

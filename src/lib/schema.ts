@@ -11,7 +11,6 @@ export const organizationSchema = {
   address: {
     "@type": "PostalAddress",
     addressCountry: "ES",
-    addressLocality: "España",
   },
   contactPoint: {
     "@type": "ContactPoint",
@@ -56,3 +55,16 @@ export const contactPageSchema = {
   name: "Contacto | 4 Ases Sales",
   url: `${BASE_URL}/contacto`,
 };
+
+export function breadcrumbSchema(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: `${BASE_URL}${item.path}`,
+    })),
+  };
+}

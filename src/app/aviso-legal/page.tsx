@@ -4,6 +4,9 @@ import LegalLayout from "@/components/legal/LegalLayout";
 export const metadata: Metadata = {
   title: "Aviso Legal | 4 Ases Sales",
   description: "Aviso legal de 4 Ases Sales conforme a la Ley 34/2002 de Servicios de la Sociedad de la Información.",
+  alternates: {
+    canonical: "/aviso-legal",
+  },
   robots: { index: false },
 };
 

@@ -4,6 +4,9 @@ import LegalLayout from "@/components/legal/LegalLayout";
 export const metadata: Metadata = {
   title: "Política de Privacidad | 4 Ases Sales",
   description: "Política de privacidad de 4 Ases Sales conforme al RGPD y la LOPDGDD.",
+  alternates: {
+    canonical: "/politica-de-privacidad",
+  },
   robots: { index: false },
 };
 

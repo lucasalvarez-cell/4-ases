@@ -47,8 +47,7 @@ const services = [
       "Gestión de máquinas de vending y café",
       "Control de mermas y desperdicio alimentario",
     ],
-    photo:
-      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80",
+    photo: "/servicio-food-beverage.jpg",
   },
   {
     num: "04",
@@ -77,8 +76,7 @@ const services = [
       "Gestión de tratamiento de piscinas",
       "Limpieza técnica e higienización industrial",
     ],
-    photo:
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=80",
+    photo: "/servicio-mantenimiento-quimicos.jpg",
   },
   {
     num: "06",
@@ -92,8 +90,7 @@ const services = [
       "Nuevas aperturas llave en mano",
       "Reformas y adecuaciones de locales",
     ],
-    photo:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80",
+    photo: "/servicio-proyectos-medida.jpg",
   },
 ];
 

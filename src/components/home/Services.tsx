@@ -8,39 +8,45 @@ import Image from "next/image";
 const services = [
   {
     num: "01",
-    slug: "personal-ett",
-    title: "Personal y ETT",
-    desc: "Gestión eficiente de recursos humanos y empresas de trabajo temporal para maximizar la productividad.",
-    photo: true,
-    photoUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80",
-    dark: false,
+    slug: "outsourcing-ett",
+    title: "Outsourcing y ETT",
+    desc: "Optimización de recursos humanos y soluciones de trabajo temporal adaptadas a cada establecimiento.",
+    photoUrl: "/limpieza.png",
   },
   {
     num: "02",
-    slug: "suministros",
-    title: "Suministros",
-    desc: "Energía, agua, telecomunicaciones y otros suministros esenciales con tarifas altamente competitivas.",
-    photo: true,
-    photoUrl: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80",
-    dark: false,
+    slug: "lavanderia-textil",
+    title: "Lavandería y Textil",
+    desc: "Mejora de costes, calidad de servicio y eficiencia en lavandería industrial y suministro textil.",
+    photoUrl: "/lavanderia.png",
   },
   {
     num: "03",
-    slug: "lavanderias",
-    title: "Lavanderías",
-    desc: "Servicios de lavandería industrial optimizados para los sectores hotelero, sanitario y corporativo.",
-    photo: true,
-    photoUrl: "/lavanderia.png",
-    dark: true,
+    slug: "food-beverage",
+    title: "Food & Beverage",
+    desc: "Café, vending, bebidas y restauración optimizados para huéspedes y empleados.",
+    photoUrl: "/servicio-food-beverage.jpg",
   },
   {
     num: "04",
-    slug: "otros-servicios",
-    title: "Otros Servicios",
-    desc: "Soluciones integrales adaptadas a todas las necesidades operativas específicas de tu empresa.",
-    photo: true,
-    photoUrl: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80",
-    dark: false,
+    slug: "menaje-amenities",
+    title: "Menaje y Amenities",
+    desc: "Artículos de cortesía y menaje de habitaciones que elevan la experiencia del huésped.",
+    photoUrl: "/menaje-amenities.png",
+  },
+  {
+    num: "05",
+    slug: "mantenimiento-quimicos",
+    title: "Mantenimiento y Químicos",
+    desc: "Mantenimiento preventivo y correctivo, productos químicos profesionales y limpieza técnica.",
+    photoUrl: "/servicio-mantenimiento-quimicos.jpg",
+  },
+  {
+    num: "06",
+    slug: "proyectos-medida",
+    title: "Proyectos a Medida",
+    desc: "Gestión integral de reformas, adecuaciones y nuevas aperturas llave en mano.",
+    photoUrl: "/servicio-proyectos-medida.jpg",
   },
 ];
 
@@ -68,15 +74,15 @@ export default function Services() {
           </Link>
         </div>
 
-        {/* Grid: single column on mobile, 2×2 bento on sm+ */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 gap-3 sm:h-[560px] md:h-[620px]">
+        {/* Grid: single column on mobile, 2 cols on sm, 3×2 bento on lg+ */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {services.map((s, i) => (
-            <Link key={s.num} href={`/servicios#${s.slug}`} className="h-[260px] sm:h-full block">
+            <Link key={s.num} href={`/servicios#${s.slug}`} className="h-[260px] sm:h-[300px] lg:h-[320px] block">
               <motion.div
                 initial={{ opacity: 0, scale: 0.97 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ delay: i * 0.08 }}
                 className="relative overflow-hidden group cursor-pointer h-full"
               >
                 <Image
@@ -84,14 +90,14 @@ export default function Services() {
                   alt={s.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  sizes="(max-width: 640px) 100vw, 50vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 p-5 sm:p-6 md:p-8">
+                <div className="absolute bottom-0 left-0 p-5 sm:p-6">
                   <p className="text-white/40 text-[10px] tracking-[0.3em] font-sans mb-2">
                     {s.num}
                   </p>
-                  <h3 className="font-display text-2xl md:text-3xl text-white font-medium mb-1.5 sm:mb-2">
+                  <h3 className="font-display text-xl md:text-2xl text-white font-medium mb-1.5 sm:mb-2">
                     {s.title}
                   </h3>
                   <p className="text-white/60 text-xs sm:text-sm font-sans leading-relaxed max-w-xs">
