@@ -11,6 +11,8 @@ export default function AboutHero() {
         alt=""
         fill
         priority
+        placeholder="blur"
+        blurDataURL="data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAIAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAID/8QAIBAAAgEEAQUAAAAAAAAAAAAAAQIAAwQFEhETITFRcf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAWEQADAAAAAAAAAAAAAAAAAAAAATH/2gAMAwEAAhEDEQA/AMMdlKVpbt0loUw40cEHuRz7PmQMgtFVGtuAw2G7FTx8AiIVROH/2Q=="
         className="object-cover"
         sizes="100vw"
       />
