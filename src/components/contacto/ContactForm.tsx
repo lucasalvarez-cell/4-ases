@@ -12,6 +12,7 @@ type Status = "idle" | "loading" | "success" | "error";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const [startedAt] = useState(() => Date.now());
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -24,6 +25,8 @@ export default function ContactForm() {
       email: data.get("email") as string,
       telefono: data.get("telefono") as string,
       mensaje: data.get("mensaje") as string,
+      website: data.get("website") as string,
+      elapsedMs: Date.now() - startedAt,
     };
 
     try {
@@ -125,6 +128,14 @@ export default function ContactForm() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-8">
+                <input
+                  type="text"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="absolute -left-[9999px] w-px h-px opacity-0"
+                />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <label className="block text-[10px] tracking-[0.2em] uppercase text-muted font-sans mb-3">

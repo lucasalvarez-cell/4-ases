@@ -50,6 +50,14 @@ export async function POST(req: Request) {
   const email: string = String(body.email ?? "").trim().slice(0, 254);
   const telefono: string = String(body.telefono ?? "").trim().slice(0, 30);
   const mensaje: string = String(body.mensaje ?? "").trim().slice(0, 2000);
+  const website: string = String(body.website ?? "").trim();
+  const elapsedMs = Number(body.elapsedMs);
+
+  // Honeypot + time-trap: silently accept without sending email so bots don't adapt
+  const MIN_SUBMIT_MS = 1500;
+  if (website || !Number.isFinite(elapsedMs) || elapsedMs < MIN_SUBMIT_MS) {
+    return NextResponse.json({ ok: true });
+  }
 
   if (!nombre || !empresa || !email) {
     return NextResponse.json({ error: "Faltan campos obligatorios" }, { status: 400 });
